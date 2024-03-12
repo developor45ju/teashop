@@ -3,7 +3,6 @@ import { faBell, faUser } from '@fortawesome/free-solid-svg-icons'
 
 function Header(props) {
     const { links, logo } = props;
-    console.log(links);   
         
     return (
         <>
@@ -11,9 +10,11 @@ function Header(props) {
                 <div className="logo"><img src={logo} alt="Ta   sse de thé" /></div>
                 <nav className="navbar">
                     <ul className="navbar__items">
-                        {links.map((link, i) => (<li key={i}>
+                        {links.map((link, i) => (
+                            <li key={i}>
                                 <a href={`./pages/${link.toLowerCase()}.html`}>{link}</a>
-                            </li>))}
+                            </li>
+                        ))}
                     </ul>
                 </nav>
                 <div className="notifications">
